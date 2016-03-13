@@ -7,5 +7,7 @@ This maven command can be used to run all tests and compile everything into a ja
 mvn clean verify -Pjacoco,pitest,sonar
 
 Jacoco publishes its report under /target/site/jacoco/index.html
+
 Pitest publishes its report under /target/pit-reports/.../index.html
+
 Sonarqube will publish its report to your local sonar server which should be running at the default location
