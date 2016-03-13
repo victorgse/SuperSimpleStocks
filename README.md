@@ -1,5 +1,5 @@
 # SuperSimpleStocks
-Solution for "Super Simple Stocks" technical exercise
+Solution for the awesome "Super Simple Stocks" technical exercise
 
 Maven is used to compile the project. The following additional profiles have been enabled: jacoco (code coverage analysis), pitest (mutation testing), and sonar (sonarqube code quality analysis).
 
