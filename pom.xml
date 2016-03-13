@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>super-simple-stocks</name>
-  <url>https://github.com/victorgse</url>
+  <url>https://github.com/victorgse/SuperSimpleStocks</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
