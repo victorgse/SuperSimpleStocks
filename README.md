@@ -1,5 +1,5 @@
 # Super Simple Stocks
-Solution for the awesome "Super Simple Stocks" technical exercise
+Solution to the awesome "Super Simple Stocks" technical exercise
 
 Maven is used to compile the project. The following additional profiles have been enabled: jacoco (code coverage analysis), pitest (mutation testing), and sonar (sonarqube code quality analysis).
 
@@ -15,7 +15,7 @@ mvn clean verify -Pjacoco,pitest,sonar
 
 To install the app (so that you would be able to execute the jar later on), run this command instead:
 
-mvn clean install -Pjacoco,pitest,sonar
+mvn clean install
 
 After, that you would be able to run the jar with this command:
 
