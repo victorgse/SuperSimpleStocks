@@ -1,0 +1,9 @@
+/build/
+/bin/
+/target/
+/.settings/
+/.idea/
+.classpath
+.project
+super-simple-stocks.log
+SuperSimpleStocks.iml
