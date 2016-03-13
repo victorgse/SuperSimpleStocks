@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="helloWorld" class="com.victorgse.StockExchange">
+    <bean id="stockExchange" class="com.victorgse.StockExchange">
         <constructor-arg type="java.lang.String" value="Global Beverage Corporation Exchange"/>
         <constructor-arg ref="listedStocksMap"/>
     </bean>

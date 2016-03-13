@@ -19,7 +19,7 @@ public class App {
 
     public static void main( String[] args ) {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        StockExchange stockExchange = context.getBean(StockExchange.class);
+        StockExchange stockExchange = (StockExchange) context.getBean("stockExchange");
         LOGGER.info("StockExchange '" + stockExchange.getName() + "' retrieved from context.");
 
         Map<String, Stock> stocksListedOnExchange = stockExchange.getListedStocksMap();
