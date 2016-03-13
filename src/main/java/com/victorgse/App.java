@@ -20,7 +20,7 @@ public class App {
     public static void main( String[] args ) {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         StockExchange stockExchange = (StockExchange) context.getBean("stockExchange");
-        LOGGER.info("StockExchange '" + stockExchange.getName() + "' retrieved from context.");
+        LOGGER.info("Stock exchange '" + stockExchange.getName() + "' retrieved from context.");
 
         Map<String, Stock> stocksListedOnExchange = stockExchange.getListedStocksMap();
         Iterator<String> iteratorOverAllStockSymbolsInIndex = stocksListedOnExchange.keySet().iterator();
@@ -45,7 +45,8 @@ public class App {
                     stock.getSymbol(), stock.calculateVolumeWeightedStockPriceOfTradesInLastFifteenMins()));
         }
 
-        LOGGER.info(String.format("All Share Index Geometic Mean for '%s': %s", stockExchange.getName(), stockExchange.calculateAllShareIndexGeometricMean()));
+        LOGGER.info(String.format("All Share Index Geometric Mean for '%s' based on last trading prices for stocks: %s",
+                stockExchange.getName(), stockExchange.calculateAllShareIndexGeometricMean()));
     }
 
 }
