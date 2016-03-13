@@ -17,7 +17,7 @@ To install the app (so that you would be able to execute the jar later on), run 
 
 mvn clean install
 
-After, that you would be able to run the jar with this command:
+After that you would be able to run the jar with this command:
 
 java -jar super-simple-stocks-1.0-SNAPSHOT.jar
 
