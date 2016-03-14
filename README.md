@@ -21,5 +21,5 @@ After that you would be able to run the jar with this command:
 
 java -jar super-simple-stocks-1.0-SNAPSHOT.jar
 
-The program logs its output to the console as well as to the super-simple-stocks.log file, which lives at the project's root. (There might be an exception in the program's log after running the program. This is due to the app being asked to compute the P/E ratio of a company that didn't pay out any dividends and division to zero being impossible - this exception is intentionally printed to the program's output to facilitate the possibility for debugging.)
+The program logs its output to the console as well as to the super-simple-stocks.log file, which lives at the project's root.
 
