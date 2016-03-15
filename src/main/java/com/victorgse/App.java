@@ -25,7 +25,7 @@ public class App {
 
         Map<String, Stock> stocksListedOnExchange = stockExchange.getListedStocksMap();
         Iterator<String> iteratorOverAllStockSymbolsInIndex = stocksListedOnExchange.keySet().iterator();
-        LOGGER.info("stocks listed on exchange: ");
+        LOGGER.info("Stocks listed on exchange: ");
         while (iteratorOverAllStockSymbolsInIndex.hasNext()) {
             Stock stock = stocksListedOnExchange.get(iteratorOverAllStockSymbolsInIndex.next());
             LOGGER.info(stock.toString());
