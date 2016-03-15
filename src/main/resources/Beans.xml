@@ -10,7 +10,7 @@
 
     <bean id="listedStocksMap" class="java.util.HashMap">
         <constructor-arg>
-            <map key-type="java.lang.String" value-type="com.victorgse.Stock">
+            <map key-type="java.lang.String" value-type="com.victorgse.stocks.Stock">
                 <entry key="TEA" value-ref="stockTEA" />
                 <entry key="POP" value-ref="stockPOP" />
                 <entry key="ALE" value-ref="stockALE" />
@@ -20,43 +20,34 @@
         </constructor-arg>
     </bean>
 
-    <bean id="stockTEA" class="com.victorgse.Stock">
+    <bean id="stockTEA" class="com.victorgse.stocks.CommonStock">
         <constructor-arg name="symbol" value="TEA"/>
-        <constructor-arg name="type" value="COMMON"/>
         <constructor-arg name="lastDividendInPennies" value="0"/>
-        <constructor-arg name="fixedDividendPercent"> <null /> </constructor-arg>
         <constructor-arg name="parValueInPennies" value="100"/>
     </bean>
 
-    <bean id="stockPOP" class="com.victorgse.Stock">
+    <bean id="stockPOP" class="com.victorgse.stocks.CommonStock">
         <constructor-arg name="symbol" value="POP"/>
-        <constructor-arg name="type" value="COMMON"/>
         <constructor-arg name="lastDividendInPennies" value="8"/>
-        <constructor-arg name="fixedDividendPercent"> <null /> </constructor-arg>
         <constructor-arg name="parValueInPennies" value="100"/>
     </bean>
 
-    <bean id="stockALE" class="com.victorgse.Stock">
+    <bean id="stockALE" class="com.victorgse.stocks.CommonStock">
         <constructor-arg name="symbol" value="ALE"/>
-        <constructor-arg name="type" value="COMMON"/>
         <constructor-arg name="lastDividendInPennies" value="23"/>
-        <constructor-arg name="fixedDividendPercent"> <null /> </constructor-arg>
         <constructor-arg name="parValueInPennies" value="60"/>
     </bean>
 
-    <bean id="stockGIN" class="com.victorgse.Stock">
+    <bean id="stockGIN" class="com.victorgse.stocks.PreferredStock">
         <constructor-arg name="symbol" value="GIN"/>
-        <constructor-arg name="type" value="PREFERRED"/>
         <constructor-arg name="lastDividendInPennies" value="8"/>
         <constructor-arg name="fixedDividendPercent" value="0.02"/>
         <constructor-arg name="parValueInPennies" value="100"/>
     </bean>
 
-    <bean id="stockJOE" class="com.victorgse.Stock">
+    <bean id="stockJOE" class="com.victorgse.stocks.CommonStock">
         <constructor-arg name="symbol" value="JOE"/>
-        <constructor-arg name="type" value="COMMON"/>
         <constructor-arg name="lastDividendInPennies" value="13"/>
-        <constructor-arg name="fixedDividendPercent"> <null /> </constructor-arg>
         <constructor-arg name="parValueInPennies" value="250"/>
     </bean>
 

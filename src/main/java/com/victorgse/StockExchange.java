@@ -1,5 +1,7 @@
 package com.victorgse;
 
+import com.victorgse.stocks.Stock;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;

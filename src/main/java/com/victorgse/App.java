@@ -1,5 +1,6 @@
 package com.victorgse;
 
+import com.victorgse.stocks.Stock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -24,7 +25,7 @@ public class App {
 
         Map<String, Stock> stocksListedOnExchange = stockExchange.getListedStocksMap();
         Iterator<String> iteratorOverAllStockSymbolsInIndex = stocksListedOnExchange.keySet().iterator();
-        LOGGER.info("Stocks listed on exchange: ");
+        LOGGER.info("stocks listed on exchange: ");
         while (iteratorOverAllStockSymbolsInIndex.hasNext()) {
             Stock stock = stocksListedOnExchange.get(iteratorOverAllStockSymbolsInIndex.next());
             LOGGER.info(stock.toString());

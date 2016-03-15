@@ -1,5 +1,8 @@
 package com.victorgse;
 
+import com.victorgse.stocks.CommonStock;
+import com.victorgse.stocks.PreferredStock;
+import com.victorgse.stocks.Stock;
 import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,11 +23,11 @@ public class StockExchangeTest {
     @Before
     public void setUp() {
         Map<String, Stock> listedStocksMap = new HashMap<String, Stock>();
-        listedStocksMap.put("TEA", new Stock("TEA", Stock.Type.COMMON, new BigDecimal("0"), null, new BigDecimal("100")));
-        listedStocksMap.put("POP", new Stock("POP", Stock.Type.COMMON, new BigDecimal("8"), null, new BigDecimal("100")));
-        listedStocksMap.put("ALE", new Stock("ALE", Stock.Type.COMMON, new BigDecimal("23"), null, new BigDecimal("60")));
-        listedStocksMap.put("GIN", new Stock("GIN", Stock.Type.PREFERRED, new BigDecimal("8"), new BigDecimal("0.02"), new BigDecimal("100")));
-        listedStocksMap.put("JOE", new Stock("JOE", Stock.Type.COMMON, new BigDecimal("13"), null, new BigDecimal("250")));
+        listedStocksMap.put("TEA", new CommonStock("TEA", new BigDecimal("0"), new BigDecimal("100")));
+        listedStocksMap.put("POP", new CommonStock("POP", new BigDecimal("8"), new BigDecimal("100")));
+        listedStocksMap.put("ALE", new CommonStock("ALE", new BigDecimal("23"), new BigDecimal("60")));
+        listedStocksMap.put("GIN", new PreferredStock("GIN", new BigDecimal("8"), new BigDecimal("0.02"), new BigDecimal("100")));
+        listedStocksMap.put("JOE", new CommonStock("JOE", new BigDecimal("13"), new BigDecimal("250")));
         stockExchange = new StockExchange("Global Beverage Corporation Exchange", listedStocksMap);
     }
 
@@ -48,7 +51,7 @@ public class StockExchangeTest {
 
     @Test
     public void testCalculateNthRootOfNumberIsCalledWhenStocksHaveBeenTradedAlready() {
-        Stock additionalStock = new Stock("TEST", Stock.Type.COMMON, new BigDecimal("10"), null, new BigDecimal("50"));
+        Stock additionalStock = new CommonStock("TEST", new BigDecimal("10"), new BigDecimal("50"));
         Trade additionalTrade = new Trade(new DateTime(), 10, Trade.Type.BUY, new BigDecimal("50"));
         additionalStock.recordTrade(additionalTrade);
         stockExchange.getListedStocksMap().put("TEST", additionalStock);
